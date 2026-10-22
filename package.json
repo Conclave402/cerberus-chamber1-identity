@@ -1,0 +1,32 @@
+{
+  "name": "cerberus-chamber1-identity",
+  "version": "1.0.0",
+  "description": "Chamber 1 of the Cerberus airlock: the identity challenge a LAX listing owner signs with EIP-191, and its verifier.",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=22.6"
+  },
+  "main": "src/index.ts",
+  "types": "src/types.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "files": [
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --import tsx --test test/*.test.ts",
+    "test:native": "node --experimental-strip-types --test test/*.test.ts",
+    "coverage": "node --import tsx --experimental-test-coverage --test test/*.test.ts",
+    "coverage:gate": "node tools/coverage_gate.mjs"
+  },
+  "dependencies": {
+    "viem": "2.47.0"
+  },
+  "devDependencies": {
+    "tsx": "4.23.13"
+  }
+}
